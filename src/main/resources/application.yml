@@ -1,0 +1,25 @@
+server:
+  port: 8082
+
+
+#mongodb
+spring:
+    application:
+      name: student-service
+    data:
+        mongodb:
+            host : localhost
+            port : 27017
+            database : chargie
+    cloud:
+        config:
+            uri : file:///G:/microservices/git-localconfig-repo
+            profile: dev
+logging:
+   level:
+       org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
